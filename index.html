@@ -31,12 +31,27 @@
                 <div class="submit_buttons">
                     <button class="submit_button submit_ok" onclick="start()">OK <i
                             class="fa-solid fa-check"></i></button>
-                    <button class="submit_button submit_default" onclick="startDefault()">Default (0 - 20)</button>
+                    <button class="submit_button submit_default" onclick="start(0, 20)">Default (0 - 20)</button>
                 </div>
             </div>
         </div>
         <div class="game_container">
-
+            <div class="game_header">
+                <p class="game_title">Guess The Number</p>
+                <p class="game_task">Guess the number between: <span class="numbers_range" id="numbersRange"></span></p>
+                <span class="player_lives" id="playerLives"></span>
+            </div>
+            <div class="game_main">
+                <div class="input_field">
+                    <p class="help_message" id="helpMessage"></p>
+                    <label for="numberGuess">Your Number: </label>
+                    <input type="number" id="numberGuess"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="3" />
+                </div>
+                <p class="wrong_numbers">Wrong numbers: <span id="wrongNumbers"></span></p>
+                <button onclick="location.reload()">Restart</button>
+            </div>
         </div>
     </main>
 </body>

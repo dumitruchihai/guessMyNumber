@@ -22,16 +22,18 @@ class GameLogic {
         this.secretNumber = this.generateSecretNumber()
     }
 
-    generateSecretNumber() {
-        return Math.floor(Math.random() * (this.playerMaxNumber - this.playerMinNumber + 1)) + this.playerMinNumber
+    checkGuess(guess) {
+        console.log(guess)
+        console.log(this.secretNumber)
+        if (guess == this.secretNumber) {
+            return true
+        }
+        this.playerLives--
+        return false
     }
 
-    restart() {
-        this.playerMinNumber = 0
-        this.playerMaxNumber = 0
-        this.playerLives = 0
-        this.secretNumber = 0
-        this.previousGuesses = []
+    generateSecretNumber() {
+        return Math.floor(Math.random() * (this.playerMaxNumber - this.playerMinNumber + 1)) + this.playerMinNumber
     }
 
     verifyNumbers(minNumber, maxNumber) {
