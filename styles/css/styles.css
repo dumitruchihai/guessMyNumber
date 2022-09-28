@@ -1,0 +1,374 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+button,
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+main .level_choose {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(44, 44, 44);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .level_choose .level_choose_container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  height: 300px;
+  gap: 20px;
+}
+main .level_choose .level_choose_container .input_field label {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+main .level_choose .level_choose_container .input_field input {
+  width: 100px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border-bottom: 1px solid yellow;
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+main .level_choose .level_choose_container .input_field input::-webkit-input-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .level_choose .level_choose_container .input_field input::-moz-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .level_choose .level_choose_container .input_field input:-ms-input-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .level_choose .level_choose_container .input_field input::-ms-input-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .level_choose .level_choose_container .input_field input::placeholder {
+  color: rgb(160, 160, 160);
+}
+main .level_choose .level_choose_container .submit_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+main .level_choose .level_choose_container .submit_buttons .submit_button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+main .level_choose .level_choose_container .submit_buttons .submit_button.submit_ok {
+  background-color: lightgreen;
+}
+main .level_choose .level_choose_container .submit_buttons .submit_button.submit_default {
+  background-color: yellow;
+}
+
+main .game_container {
+  text-align: center;
+}
+main .game_container .game_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+main .game_container .game_header .game_title {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  font-size: 3rem;
+}
+main .game_container .game_header .game_task {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+main .game_container .game_header .game_task .numbers_range {
+  color: yellow;
+}
+main .game_container .game_header .player_lives {
+  margin: 0 auto;
+  color: red;
+  font-size: 1.5rem;
+  width: 410px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+main .game_container .game_main {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+main .game_container .game_main .help_message {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  color: yellow;
+  font-size: 1.5rem;
+}
+main .game_container .game_main .input_field label {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+main .game_container .game_main .input_field input {
+  width: 100px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border-bottom: 1px solid yellow;
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+main .game_container .game_main .input_field input::-webkit-input-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .game_container .game_main .input_field input::-moz-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .game_container .game_main .input_field input:-ms-input-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .game_container .game_main .input_field input::-ms-input-placeholder {
+  color: rgb(160, 160, 160);
+}
+main .game_container .game_main .input_field input::placeholder {
+  color: rgb(160, 160, 160);
+}
+main .game_container .game_main .input_field input {
+  width: 70px;
+  text-align: center;
+}
+main .game_container .game_main .wrong_numbers {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+main .game_container .game_main button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background-color: orange;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(44, 44, 44);
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

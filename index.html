@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/gameLogic.js" defer></script>
+    <title>Guess the Number</title>
+</head>
+
+<body>
+    <main>
+        <div class="level_choose" id="modal">
+            <div class="level_choose_container">
+                <div class="input_field">
+                    <label for="min_number">Min number: </label>
+                    <input type="number" id="min_number" min="0" placeholder="from" />
+                </div>
+                <div class="input_field">
+                    <label for="max_number">Max number: </label>
+                    <input type="number" id="max_number" min="0" placeholder="to" />
+                </div>
+                <div class="submit_buttons">
+                    <button class="submit_button submit_ok" onclick="start()">OK <i
+                            class="fa-solid fa-check"></i></button>
+                    <button class="submit_button submit_default" onclick="start(0, 20)">Default (0 - 20)</button>
+                </div>
+            </div>
+        </div>
+        <div class="game_container">
+            <div class="game_header">
+                <p class="game_title">Guess The Number</p>
+                <p class="game_task">Guess the number between: <span class="numbers_range" id="numbersRange"></span></p>
+                <span class="player_lives" id="playerLives"></span>
+            </div>
+            <div class="game_main">
+                <p class="help_message" id="helpMessage"></p>
+                <div class="input_field">
+                    <label for="numberGuess">Your Number: </label>
+                    <input type="number" id="numberGuess"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="3" />
+                </div>
+                <p class="wrong_numbers">Wrong numbers: <span id="wrongNumbers"></span></p>
+                <button onclick="location.reload()">Restart</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
