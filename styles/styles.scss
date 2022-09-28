@@ -1,2 +1,77 @@
 @import '_resets';
 @import '_variables';
+
+main {
+    .level_choose {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // display: none;
+
+        .level_choose_container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            gap: 20px;
+
+            .input_field {
+                label {
+                    color: white;
+                    font-family: $Comfortaa;
+                }
+
+                input {
+                    width: 100px;
+                    height: 30px;
+                    padding: 0 10px;
+                    font-size: 16px;
+                    background-color: transparent;
+                    border-bottom: 1px solid yellow;
+                    font-family: $Comfortaa;
+                    color: white;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    &[type=number] {
+                        -moz-appearance: textfield;
+                    }
+                }
+            }
+
+            .submit_buttons {
+                display: flex;
+                gap: 20px;
+
+                .submit_button {
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-family: $Comfortaa;
+                    font-weight: bold;
+                    font-size: 16px;
+
+                    &.submit_ok {
+                        background-color: lightgreen;
+                    }
+
+                    &.submit_default {
+                        background-color: yellow;
+                    }
+                }
+            }
+        }
+    }
+}
