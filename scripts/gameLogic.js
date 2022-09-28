@@ -18,29 +18,24 @@ class GameLogic {
     play(minNumber, maxNumber) {
         this.playerMinNumber = minNumber
         this.playerMaxNumber = maxNumber
-        this.playerLives = Math.floor((this.playerMaxNumber - this.playerMinNumber) / 4)
+        this.playerLives = Math.ceil((this.playerMaxNumber - this.playerMinNumber) / 4)
         this.secretNumber = this.generateSecretNumber()
     }
 
     checkGuess(guess) {
-        console.log(guess)
-        console.log(this.secretNumber)
         if (guess == this.secretNumber) {
             return true
         }
+        this.previousGuesses.push(guess)
         this.playerLives--
         return false
     }
 
     generateSecretNumber() {
-        return Math.floor(Math.random() * (this.playerMaxNumber - this.playerMinNumber + 1)) + this.playerMinNumber
+        return Math.floor(Math.random() * (this.playerMaxNumber - this.playerMinNumber + 1) + this.playerMinNumber)
     }
 
     verifyNumbers(minNumber, maxNumber) {
-        if (!minNumber || !maxNumber) {
-            alert('Please enter a number')
-            return false
-        }
         if (minNumber < 0 || maxNumber < 0) {
             alert("Please enter a positive number")
             return false
@@ -50,6 +45,7 @@ class GameLogic {
             return false
         }
         if (minNumber > maxNumber) {
+            console.log(minNumber, maxNumber)
             alert("Min number must be less than max number")
             return false
         }

@@ -31,7 +31,7 @@ main {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 5px
+                gap: 5px;
             }
         }
 
@@ -41,6 +41,12 @@ main {
             flex-direction: column;
             align-items: center;
             gap: 20px;
+
+            .help_message {
+                @include common_font;
+                color: yellow;
+                font-size: 1.5rem;
+            }
 
             @include common_input;
 
@@ -53,6 +59,13 @@ main {
 
             .wrong_numbers {
                 @include common_font;
+
+                margin: 0 auto;
+                width: 400px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
             }
 
             button {

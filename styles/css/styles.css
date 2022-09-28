@@ -282,6 +282,13 @@ main .game_container .game_main {
           align-items: center;
   gap: 20px;
 }
+main .game_container .game_main .help_message {
+  font-family: "Comfortaa", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  color: yellow;
+  font-size: 1.5rem;
+}
 main .game_container .game_main .input_field label {
   font-family: "Comfortaa", sans-serif;
   color: white;
@@ -321,6 +328,17 @@ main .game_container .game_main .wrong_numbers {
   font-family: "Comfortaa", sans-serif;
   color: white;
   font-size: 1.2rem;
+  margin: 0 auto;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
 }
 main .game_container .game_main button {
   padding: 10px 20px;

@@ -2,11 +2,6 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none'
 }
 
-window.onload = () => {
-    start(0, 20)
-}
-
-
 function start(start, end) {
     const game = new GameLogic()
 
@@ -14,12 +9,13 @@ function start(start, end) {
     const maxNumber = document.getElementById('max_number').value
     const numbersRange = document.getElementById('numbersRange')
     const wrongNumbers = document.getElementById('wrongNumbers')
+    const helpMessage = document.getElementById('helpMessage')
 
     if (start || end) {
         game.play(start, end)
         closeModal()
-    } else if (game.verifyNumbers(minNumber, maxNumber)) {
-        game.play(minNumber, maxNumber)
+    } else if (game.verifyNumbers(parseInt(minNumber), parseInt(maxNumber))) {
+        game.play(parseInt(minNumber), parseInt(maxNumber))
         closeModal()
     }
 
@@ -27,8 +23,20 @@ function start(start, end) {
 
     numberGuess.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            game.checkGuess(numberGuess.value)
-            showLives(game.playerLives)
+            if (numberGuess.value) {
+                if (game.checkGuess(numberGuess.value)) {
+                    alert('You won, the number was ' + game.secretNumber)
+                    location.reload()
+                }
+                helpMessage.innerHTML = game.previousGuesses[game.previousGuesses.length - 1] > game.secretNumber ? 'Too high' : 'Too low'
+                showLives(game.playerLives)
+                wrongNumbers.innerHTML = game.previousGuesses.join(', ')
+                numberGuess.value = ''
+                if (game.playerLives === 0) {
+                    alert('You lost, the number was ' + game.secretNumber)
+                    location.reload()
+                }
+            }
         }
     })
 
