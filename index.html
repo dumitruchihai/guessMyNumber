@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Guess my number!</title>
+  </head>
+  <body>
+    <h1>Guess my number</h1>
+    <p class="rules">Guess a random number between 0 and 20</p>
+    <p class="userGuesses disable">
+      Your guesses:<span class="guesses"></span>
+    </p>
+    <section class="game">
+      <p id="message">Click 'Start' when you are ready</p>
+      <form id="form">
+        <input
+          onkeyup="validateInput()"
+          max="20"
+          min="0"
+          disabled
+          type="number"
+          id="guess"
+          name="guess"
+          placeholder="Type your guess ..."
+        />
+        <button disabled type="button" id="check">Check answer</button>
+      </form>
+      <button id="start">Start game</button>
+      <button id="restart" class="disable">Try again</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- 
+1. start button
+2. generate random number 0 - 20
+3. user input. total - 5 guesses
+4. user can introduce only numbers between 0 - 20.
+otherwise - disable check button
+5. on every attempt: "The number is greater/less than x, 
+you have z more attempt/s"
+6. If the user guess the number display "You win, the numer was x".
+7. If the user don't guess the number "You lost. Number was x".
+8. Try again button
+-->
